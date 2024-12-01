@@ -18,9 +18,10 @@ public class Company {
     @GeneratedValue( strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-
-    private String openingHours;
-    private String closingHours;
+    @OneToOne
+    private User owner;
+    private String openingHour;
+    private String closingHour;
     @ElementCollection
     private List<LocalTime> availableTravelHours;
     @OneToMany(mappedBy = "company", orphanRemoval = true, fetch = FetchType.LAZY,

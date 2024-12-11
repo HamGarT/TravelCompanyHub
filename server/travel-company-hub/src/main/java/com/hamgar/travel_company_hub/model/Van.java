@@ -24,8 +24,7 @@ public class Van {
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
-    @OneToOne
-    @JoinColumn(name = "seat_map_id")
-    private SeatMap map;
+    @Embedded
+    private SeatMapVan map;
 
 }

@@ -15,12 +15,10 @@ import java.util.List;
 public class CompanyServiceImplementation implements CompanyService{
     @Autowired
     private CompanyRepository companyRepository;
-    @Autowired
-    private CompanyService companyService;
+
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private UserService userService;
+
 
     @Override
     public Company createCompany(CreateCompanyRequest req, User user) {

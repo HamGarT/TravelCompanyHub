@@ -1,9 +1,6 @@
 package com.hamgar.travel_company_hub.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,12 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SeatMap {
+public class SeatMapModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "row_count")
     private int rows;
-    private  int column;
-    private String map;
+    @Column(name = "column_count")
+    private int column;
+    private String mapa;
+    @Column(name = "van_model")
     private String vanModel;
 }

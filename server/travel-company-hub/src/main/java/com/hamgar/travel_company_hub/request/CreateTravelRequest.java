@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class CreateTravelRequest {
     private  Double price;
     private TRAVELSTATUS travelstatus;
-    private LocalDateTime schedule;
+    //private LocalDateTime schedule;
     private Van van;
     private Driver driver;
     private Station startingStation;

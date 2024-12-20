@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 
 @Embeddable
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Address {
 
     private String streetAddress;

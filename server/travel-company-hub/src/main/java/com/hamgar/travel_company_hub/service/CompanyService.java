@@ -8,7 +8,7 @@ import com.hamgar.travel_company_hub.request.CreateCompanyRequest;
 import java.util.List;
 
 public interface CompanyService {
-    public Company createCompany(CreateCompanyRequest req, User user);
+    public Company createCompany(CreateCompanyRequest req);
     public Company updateCompany(Long companyId, CreateCompanyRequest updatedCompany) throws CompanyException;
     public List<Company> getAllCompany();
     public void deleteCompany(Long companyId) throws CompanyException;

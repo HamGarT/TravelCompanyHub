@@ -43,7 +43,7 @@ public class Travel{
     public static Travel from(CreateTravelRequest request) {
         return Travel.builder()
                 .price(request.getPrice())
-                .schedule(request.getSchedule())
+                //.schedule(request.getSchedule())
                 .travelstatus(request.getTravelstatus())
                 .van(request.getVan())
                 .driver(request.getDriver())

@@ -44,7 +44,7 @@ public class TravelServiceImplementation implements TravelService{
         updateFieldIfPresent(request.getVan(), travel::setVan);
         updateFieldIfPresent(request.getTravelstatus(), travel::setTravelstatus);
         updateFieldIfPresent(request.getDriver(), travel::setDriver);
-        updateFieldIfPresent(request.getSchedule(), travel::setSchedule);
+        //updateFieldIfPresent(request.getSchedule(), travel::setSchedule);
         updateFieldIfPresent(request.getFinalStation(), travel::setFinalStation);
         updateFieldIfPresent(request.getStartingStation(), travel::setStartingStation);
         return travelRepository.save(travel);

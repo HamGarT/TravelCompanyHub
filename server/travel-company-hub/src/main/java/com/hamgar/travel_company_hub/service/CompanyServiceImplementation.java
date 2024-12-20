@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CompanyServiceImplementation implements CompanyService{
+public class CompanyServiceImplementation implements CompanyService {
     @Autowired
     private CompanyRepository companyRepository;
 
@@ -21,8 +21,14 @@ public class CompanyServiceImplementation implements CompanyService{
 
 
     @Override
-    public Company createCompany(CreateCompanyRequest req, User user) {
-        return null;
+    public Company createCompany(CreateCompanyRequest req) {
+        Company company = Company.builder()
+                .name(req.getName())
+                .closingHour(req.getClosingHour())
+                .openingHour(req.getOpeningHour())
+                .owner(req.getOwner())
+                .build();
+        return companyRepository.save(company);
     }
 
     @Override
